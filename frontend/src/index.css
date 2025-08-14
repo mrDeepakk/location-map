@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+
+.toast { 
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background-color: #1a202c;
+    color: #fff;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1), 0 1px 2px 0 rgba(0,0,0,0.06);
+}
+
+
+
+/* Full screen animated dark gradient */
+.notfound-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(-45deg, #0f172a, #1e3a8a, #0f172a, #312e81);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Animated gradient movement */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Floating glowing shapes */
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.15;
+  filter: blur(60px);
+  animation: float 10s infinite ease-in-out;
+}
+
+.shape1 {
+  width: 250px;
+  height: 250px;
+  background: #3b82f6;
+  top: 10%;
+  left: 15%;
+}
+
+.shape2 {
+  width: 350px;
+  height: 350px;
+  background: #6366f1;
+  bottom: 15%;
+  right: 10%;
+  animation-delay: 3s;
+}
+
+.shape3 {
+  width: 180px;
+  height: 180px;
+  background: #60a5fa;
+  top: 50%;
+  left: 65%;
+  animation-delay: 6s;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(-25px) translateX(15px); }
+}
